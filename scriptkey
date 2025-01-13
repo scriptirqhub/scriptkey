@@ -84,7 +84,7 @@ local tab2 = Window:MakeTab({
 
 -- Config Tab1
 local Section1 = tab1:AddSection({
-	Name = "Key"
+	Name = "مـلاحـضه انـتـضـر قـليـلاً بـعـد الـتـشـغـيـل😐"
 })
 
 tab1:AddTextbox({
@@ -117,13 +117,6 @@ local Section1 = tab2:AddSection({
 	Name = "الـسـكـربـت لـلاعـضـاء فـقـط🔥🥵"
 })
 
-
-
-
--- Config Tab1
-local Section1 = tab2:AddSection({
-	Name = "انـتـضـر قـلـيلاً😐"
-})
 
 
 
