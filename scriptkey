@@ -97,7 +97,7 @@ tab1:AddTextbox({
 })
 
 tab1:AddButton({
-	Name = "تـأكد مـن الـمـفـاح💯",
+	Name = "تـأكد مـن الـمـفـتـاح💯",
 	Callback = function()loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptirqhub/brookhaven/refs/heads/main/IRQHUB"))()
         if _G.KeyInput == _G.Key then
             OrionLib:MakeNotification({
@@ -114,7 +114,15 @@ tab1:AddButton({
 
 -- Config Tab2
 local Section1 = tab2:AddSection({
-	Name = "حذف سكربت"
+	Name = "الـسـكـربـت لـلاعـضـاء فـقـط🔥🥵"
+})
+
+
+
+
+-- Config Tab1
+local Section1 = tab2:AddSection({
+	Name = "انـتـضـر قـلـيلاً😐"
 })
 
 
@@ -122,15 +130,12 @@ local Section1 = tab2:AddSection({
 
 
 local Section1 = tab2:AddSection({
-	Name = "GUI احذف"
+	Name = "اذا كـنـت تـريـد الـفـتـاح تـواصـل مـعـنى انسته✨✨"
 })
 
-tab2:AddButton({
-	Name = "احذف سكربت",
-	Callback = function()
-	    wait(0.5)
-	    DestroyGui()
-	end    
+
+
+
+local Section1 = tab2:AddSection({
+	Name = "vene.221"
 })
--- Script End
-OrionLib:Init()
