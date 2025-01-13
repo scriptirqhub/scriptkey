@@ -1,0 +1,136 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- Booting Library
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+
+-- Functions
+_G.Key = "عمي الدون"
+_G.KeyInput = "string"
+
+function DestroyGui()
+    OrionLib:Destroy()
+end
+
+function Menu()
+    loadstring(game:HttpGet('https://pastebin.com/raw/NaygGzGd'))()
+end
+
+
+-- Creating Window
+local Window = OrionLib:MakeWindow({Name = "مـفـتـاح🔑", HidePremium = false, IntroEnabled = false})
+
+
+-- Creating Tabs
+local tab1 = Window:MakeTab({
+	Name = "مـفـتـاح🔑",
+	Icon = "",
+	PremiumOnly = false
+})
+
+local tab2 = Window:MakeTab({
+	Name = "كـيـف تـجـيـب مـفـتـاح✨💃",
+	Icon = "",
+	PremiumOnly = false
+})
+
+
+-- Config Tab1
+local Section1 = tab1:AddSection({
+	Name = "Key"
+})
+
+tab1:AddTextbox({
+	Name = "ادخـل الـمـفـتاح هـنا🚀",
+	Default = "",
+	TextDisappear = false,
+	Callback = function(Value)
+         _G.KeyInput = Value
+	end	  
+})
+
+tab1:AddButton({
+	Name = "تـأكد مـن الـمـفـاح💯",
+	Callback = function()loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptirqhub/brookhaven/refs/heads/main/IRQHUB"))()
+        if _G.KeyInput == _G.Key then
+            OrionLib:MakeNotification({
+	        Name = "تـــــــــــــم🔥",
+	        Content = "تـم تـفـعـيل السكربت...... ",
+	        Image = "",
+	        Time = 1.5
+            })
+        wait(1.5)
+        Menu()
+    end
+	end    
+})
+
+-- Config Tab2
+local Section1 = tab2:AddSection({
+	Name = "حذف سكربت"
+})
+
+
+
+
+
+local Section1 = tab2:AddSection({
+	Name = "GUI احذف"
+})
+
+tab2:AddButton({
+	Name = "احذف سكربت",
+	Callback = function()
+	    wait(0.5)
+	    DestroyGui()
+	end    
+})
+-- Script End
+OrionLib:Init()
