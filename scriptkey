@@ -52,7 +52,7 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 
 
 -- Functions
-_G.Key = "عمي الدون"
+_G.Key = "🥵🥵"
 _G.KeyInput = "string"
 
 function DestroyGui()
@@ -65,7 +65,7 @@ end
 
 
 -- Creating Window
-local Window = OrionLib:MakeWindow({Name = "مـفـتـاح🔑", HidePremium = false, IntroEnabled = false})
+local Window = OrionLib:MakeWindow({Name = "IRQ HUB💯🇮🇶", HidePremium = false, IntroEnabled = false})
 
 
 -- Creating Tabs
