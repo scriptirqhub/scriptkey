@@ -1,58 +1,9 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 -- Booting Library
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
 
 -- Functions
-_G.Key = "🥵🥵"
+_G.Key = "الملكي وبس"
 _G.KeyInput = "string"
 
 function DestroyGui()
@@ -98,7 +49,7 @@ tab1:AddTextbox({
 
 tab1:AddButton({
 	Name = "تـأكد مـن الـمـفـتـاح💯",
-	Callback = function()loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptirqhub/IRQHUBV7/refs/heads/main/IRQHUBV7"))()
+	Callback = function()loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptirqhub/brookhaven/refs/heads/main/IRQHUB"))()
         if _G.KeyInput == _G.Key then
             OrionLib:MakeNotification({
 	        Name = "تـــــــــــــم🔥",
