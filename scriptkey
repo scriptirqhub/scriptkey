@@ -16,7 +16,7 @@ end
 
 
 -- Creating Window
-local Window = OrionLib:MakeWindow({Name = "IRQ HUB💯🇮🇶", HidePremium = false, IntroEnabled = false})
+local Window = OrionLib:MakeWindow({Name = "IRQ HUB🤯🔥", HidePremium = false, IntroEnabled = false})
 
 
 -- Creating Tabs
