@@ -69,7 +69,7 @@ local Section1 = tab2:AddSection({
 
 
 tab2:AddTextbox({
-	Name = "رابـط سـيـرفـرنـه الـيـسـكـورد تـنـورنـه🔥//انسخ الرابط وحطه بقوقل",
+	Name = "//رابـط سـيـرفـرنـه الـيـسـكـورد تـنـورنـه🔥//",
 	Default = "https://discord.gg/N8RD3nhh",
 	TextDisappear = false,
 	Callback = function(Value)
@@ -80,12 +80,8 @@ tab2:AddTextbox({
 
 
 local Section1 = tab2:AddSection({
-	Name = "اذا كـنـت تـريـد الـفـتـاح تـواصـل مـعـنى انسته✨✨"
+	Name = "(مـلاحضـه) انسخ الربط وحطه بقوقل"
 })
 
 
 
-
-local Section1 = tab2:AddSection({
-	Name = "vene.221"
-})
