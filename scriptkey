@@ -32,6 +32,14 @@ local tab2 = Window:MakeTab({
 	PremiumOnly = false
 })
 
+2Tab:AddTextbox({
+	Name = "رابـط سـيـرفـرنـه الـيـسـكـورد تـنـورنـه🔥",
+	Default = "https://discord.gg/N8RD3nhh",
+	TextDisappear = true,
+	Callback = function(Value)
+		print(Value)
+	end	  
+})
 
 -- Config Tab1
 local Section1 = tab1:AddSection({
