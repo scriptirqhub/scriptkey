@@ -27,7 +27,7 @@ local tab1 = Window:MakeTab({
 })
 
 local tab2 = Window:MakeTab({
-	Name = "كـيـف تـجـيـب مـفـتـاح✨💃",
+	Name = "مـعـلـومـات✨",
 	Icon = "",
 	PremiumOnly = false
 })
