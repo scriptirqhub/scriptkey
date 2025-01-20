@@ -1,87 +1,147 @@
--- Booting Library
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))() --Script For The Windows To Work 
+local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))() --Add-ons
+local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()--Add-ons
+local Player = game.Players.LocalPlayer --Gets The Player
 
+local Window = Fluent:CreateWindow({
+    Title = "IRQHUB😰🔥" .. Fluent.Version, 
+    SubTitle = "by T5_me",
+    TabWidth = 160, --Size Of The Tab
+    Size = UDim2.fromOffset(580, 460), --Size Of The Windows
+    Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
+    Theme = "Serenity", --Theme
+    MinimizeKey = Enum.KeyCode.LeftControl -- Used when theres no MinimizeKeybind
+}) -- Creates Windows
 
--- Functions
-_G.Key = "الملكي وبس"
-_G.KeyInput = "string"
-
-function DestroyGui()
-    OrionLib:Destroy()
+function MakeScriptHub() 
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptirqhub/brookhaven/refs/heads/main/IRQHUB"))() --Put Your Script
 end
 
-function Menu()
-    loadstring(game:HttpGet('https://pastebin.com/raw/NaygGzGd'))()
-end
+--Fluent provides Lucide Icons https://lucide.dev/icons/ f00or the tabs, icons are optional
+local Tabs = {
+    Main = Window:AddTab({ Title = "الـبـدايـه🏠", Icon = "" }),
+    Settings = Window:AddTab({ Title = "الاعـدادات", Icon = "settings" })
+} --Add Tabs
+
+local Options = Fluent.Options --???
+
+do
+
+Fluent:Notify({
+        Title = "تـم تـفـعـيل IRQHUB🥵🇮🇶",
+        Content = "مــــــــــــــــــنور يـا "..Player.Name..".",
+        Duration = 2 -- Set to nil to make the notification not disappear
+    }) --Notification
+
+getgenv().Key = "الملكي وبس" --Put Your Password
+getgenv().KeyInput = "string" --???
+
+    Tabs.Main:AddParagraph({
+        Title = "👇ادخـل الـمـفـتـاح هـنـا👇",
+        Content = "الـسـكـربـت لـلاعـضـاء فـقـط🥵"
+    }) --Paragraph You Can Remove This
+
+local Input = Tabs.Main:AddInput("Input", {
+        Title = "الـمـفـتـاح🔑",
+        Default = "",
+        Placeholder = "",
+        Numeric = false, -- Only allows numbers
+        Finished = true, -- Only calls callback when you press enter
+        Callback = function(txt)
+            getgenv().KeyInput = txt
+        end
+    }) --Textbox/This Is Where  to Put The key
 
 
--- Creating Window
-local Window = OrionLib:MakeWindow({Name = "IRQ HUB🤯🔥", HidePremium = false, IntroEnabled = false})
 
-
--- Creating Tabs
-local tab1 = Window:MakeTab({
-	Name = "مـفـتـاح🔑",
-	Icon = "",
-	PremiumOnly = false
+    Tabs.Main:AddButton({
+        Title = "تـاكـد مـن الـمـفـتـاح💯",
+        Description = "انـتـضـر قـلـيـلا بـعـد الـتـشـغـيـل😐",
+        Callback = function()
+            Window:Dialog({
+                Title = "IRQHUB🇮🇶🥵",
+                Content = "هـل تـريـد الـتـفـعـيـل؟! ",
+                Buttons = {
+                    {
+                        Title = "تـشتغـيـل💯",
+                        Callback = function()
+                        
+                                    if getgenv().KeyInput == getgenv().Key then
+                                    
+                                    Fluent:Notify({
+    Title = "تـحـمـيـل...... ",
+    Content = "جـارٍ الـتـحـقـق",
+    Duration = 3
 })
-
-local tab2 = Window:MakeTab({
-	Name = "مـعـلـومـات✨",
-	Icon = "",
-	PremiumOnly = false
+wait(3)
+Fluent:Notify({
+    Title = "✅الـمـفـتـاح صـحـيـح✅",
+    Content = "اسـتـمـتـع🔥",
+    Duration = 2
 })
+wait(2)
+Fluent:Destroy()
+wait(1)
+MakeScriptHub()
 
--- Config Tab1
-local Section1 = tab1:AddSection({
-	Name = "مـلاحـضه انـتـضـر قـليـلاً بـعـد الـتـشـغـيـل😐"
+else
+                            Fluent:Notify({
+    Title = "تـحـمـيـل......",
+    Content = "جـارٍ الـتـحـقـق",
+    Duration = 1
 })
-
-tab1:AddTextbox({
-	Name = "ادخـل الـمـفـتاح هـنا🚀",
-	Default = "",
-	TextDisappear = false,
-	Callback = function(Value)
-         _G.KeyInput = Value
-	end	  
+wait(1)
+Fluent:Notify({
+    Title = "❌الـمـفـتـاح خـاطـئ❌",
+    Content = "حـاول مـره اخـرى",
+    Duration = 2
 })
+                        end
+                                end
 
-tab1:AddButton({
-	Name = "تـأكد مـن الـمـفـتـاح💯",
-	Callback = function()loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptirqhub/brookhaven/refs/heads/main/IRQHUB"))()
-        if _G.KeyInput == _G.Key then
-            OrionLib:MakeNotification({
-	        Name = "الـمـفـتـاح صـحـيـح!",
-	        Content = "تـم تـفـعـيـل IRQ HUB🤯🔥",
-	        Image = "",
-	        Time = 2.5
+                    },
+                    {
+                        Title = "الـغـاء",
+                        Callback = function()
+
+                        end
+                    }
+                }
             })
-        wait(2.5)
-        Menu()
-    end
-	end    
-})
-
--- Config Tab2
-local Section1 = tab2:AddSection({
-	Name = "الـسـكـربـت لـلاعـضـاء فـقـط🔥🥵"
-})
-
-
-tab2:AddTextbox({
-	Name = "//رابـط سـيـرفـرنـه الـيـسـكـورد تـنـورنـه🔥//",
-	Default = "https://discord.gg/N8RD3nhh",
-	TextDisappear = false,
-	Callback = function(Value)
-         _G.KeyInput = Value
-	end	  
-})
+        end
+    })--Checks The Key
 
 
 
-local Section1 = tab2:AddSection({
-	Name = "(مـلاحضـه) انسخ الربط وحطه بقوقل"
-})
+
+    -- Addons:
+    -- SaveManager (Allows you to have a configuration system)
+    -- InterfaceManager (Allows you to have a interface managment system)
+
+    -- Hand the library over to our managers
+    SaveManager:SetLibrary(Fluent)
+    InterfaceManager:SetLibrary(Fluent)
+
+    -- Ignore keys that are used by ThemeManager.
+    -- (we dont want configs to save themes, do we?)
+    SaveManager:IgnoreThemeSettings()
+
+    -- You can add indexes of elements the save manager should ignore
+    SaveManager:SetIgnoreIndexes({})
+
+    -- use case for doing it this way:
+    -- a script hub could have themes in a global folder
+    -- and game configs in a separate folder per game
+    InterfaceManager:SetFolder("FluentScriptHub")
+    SaveManager:SetFolder("FluentScriptHub/specific-game")
+
+    InterfaceManager:BuildInterfaceSection(Tabs.Settings)
+    SaveManager:BuildConfigSection(Tabs.Settings)
 
 
+    Window:SelectTab(1)
 
+    -- You can use the SaveManager:LoadAutoloadConfig() to load a config
+    -- which has been marked to be one that auto loads!
+    SaveManager:LoadAutoloadConfig()
+end
